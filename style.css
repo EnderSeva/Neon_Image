@@ -1,0 +1,275 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: white;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #01001a;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.neon img{
+    height: 100%;
+    width: 100%;
+    border: solid 10px rgb(83, 34, 105);
+    object-fit: cover;
+    border-radius: 47px;
+}
+
+.knight img{
+    height: 100%;
+    width: 100%;
+    border: solid 10px rgb(105, 69, 34);
+    object-fit: cover;
+    border-radius: 47px;
+}
+
+.space img{
+    height: 100%;
+    width: 100%;
+    border: solid 10px rgb(14, 0, 119);
+    object-fit: cover;
+    border-radius: 47px;
+}
+
+.neon{
+    --clr: purple;
+    display: flex;
+    position: relative;
+    margin: 50px;
+    justify-content: center;
+    transition: .6s;
+    filter: blur(4px) brightness(0.2);
+    border: 3px solid var(--clr);
+    border-radius: 50px;
+    width: 300px;
+    height: 400px;
+}
+
+.knight{
+    --kni: #cc5e00;
+    display: flex;
+    position: relative;
+    margin: 50px;
+    justify-content: center;
+    transition: .6s;
+    filter: blur(4px) brightness(0.2);
+    border: 3px solid var(--kni);
+    border-radius: 50px;
+    width: 300px;
+    height: 400px;
+}
+
+.space{
+    --spa: #04005d;
+    display: flex;
+    position: relative;
+    margin: 50px;
+    justify-content: center;
+    transition: .6s;
+    filter: blur(4px) brightness(0.2);
+    border: 3px solid var(--spa);
+    border-radius: 50px;
+    width: 300px;
+    height: 400px;
+}
+
+.neon:hover{
+    transform: scale(1.2);
+    filter: blur(0px) brightness(1);
+}
+
+.knight:hover{
+    transform: scale(1.2);
+    filter: blur(0px) brightness(1);
+}
+
+.space:hover{
+    transform: scale(1.2);
+    filter: blur(0px) brightness(1);
+}
+
+.neon:hover::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: inherit;
+    box-shadow: 0 0 30px var(--clr);
+    animation: anim1 1s;
+    border-radius: 50px;
+}
+
+.neon:hover::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: var(--clr);
+    top:225px;
+    transform: perspective(5em) rotateX(45deg) scale(1.1, 0.2) scaleX(1.25);
+    filter: blur(5em);
+    animation: anim1 1s;
+}
+
+.knight:hover::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: inherit;
+    box-shadow: 0 0 30px var(--kni);
+    animation: anim1 1s;
+    border-radius: 50px;
+}
+
+.knight:hover::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: var(--kni);
+    top:225px;
+    transform: perspective(5em) rotateX(45deg) scale(1.1, 0.2) scaleX(1.25);
+    filter: blur(5em);
+    animation: anim1 1s;
+}
+
+.space:hover::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: inherit;
+    box-shadow: 0 0 30px var(--spa);
+    animation: anim2 1s;
+    border-radius: 50px;
+}
+
+.space:hover::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: var(--spa);
+    top:225px;
+    transform: perspective(5em) rotateX(45deg) scale(1.1, 0.2) scaleX(1.25);
+    filter: blur(5em);
+    animation: anim2 1s;
+}
+
+@keyframes anim1{
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 0.9;
+    }
+    20%{
+        opacity: 0;
+    }
+    30%{
+        opacity: 0.5;
+    }
+    40%{
+        opacity: 0.2;
+    }
+    50%{
+        opacity: 1;
+    }
+    60%{
+        opacity: 0.4;
+    }
+    70%{
+        opacity: 0.7;
+    }
+    80%{
+        opacity: 0.1;
+    }
+    90%{
+        opacity: 0.8;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes anim2{
+    0%{
+        opacity: 1;
+    }
+    10%{
+        opacity: 1;
+    }
+    20%{
+        opacity: 1;
+    }
+    30%{
+        opacity: 0.8;
+    }
+    40%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    60%{
+        opacity: 0.2;
+    }
+    70%{
+        opacity: 0;
+    }
+    80%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 0.1;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes anim3{
+    0%{
+        transform: rotateX(0);
+    }
+    10%{
+        transform: rotateX(-2deg);
+    }
+    20%{
+        transform: rotateX(2deg);
+    }
+    30%{
+        transform: rotateX(-2deg);
+    }
+    40%{
+        transform: rotateX(2deg);
+    }
+    50%{
+        transform: rotateX(-2deg);
+    }
+    60%{
+        transform: rotateX(2deg);
+    }
+    70%{
+        transform: rotateX(-2deg);
+    }
+    80%{
+        transform: rotateX(2deg);
+    }
+    90%{
+        transform: rotateX(-2deg);
+    }
+    100%{
+        transform: rotateX(0);
+    }
+}
