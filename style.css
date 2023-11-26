@@ -27,7 +27,7 @@ body{
 .knight img{
     height: 100%;
     width: 100%;
-    border: solid 10px rgb(105, 69, 34);
+    border: solid 10px rgb(181, 44, 20);
     object-fit: cover;
     border-radius: 47px;
 }
@@ -55,7 +55,7 @@ body{
 }
 
 .knight{
-    --kni: #cc5e00;
+    --kni: #cc6600;
     display: flex;
     position: relative;
     margin: 50px;
@@ -93,8 +93,9 @@ body{
 }
 
 .space:hover{
-    transform: scale(1.2);
+    /*transform: scale(1.2);*/
     filter: blur(0px) brightness(1);
+    animation: anim3 .6s;
 }
 
 .neon:hover::before{
@@ -240,36 +241,36 @@ body{
 
 @keyframes anim3{
     0%{
-        transform: rotateX(0);
+        transform: rotateY(0);
     }
     10%{
-        transform: rotateX(-2deg);
+        transform: rotateY(-20deg);
     }
     20%{
-        transform: rotateX(2deg);
+        transform: rotateY(20deg);
     }
     30%{
-        transform: rotateX(-2deg);
+        transform: rotateY(-20deg);
     }
     40%{
-        transform: rotateX(2deg);
+        transform: rotateY(20deg);
     }
     50%{
-        transform: rotateX(-2deg);
+        transform: rotateY(-20deg);
     }
     60%{
-        transform: rotateX(2deg);
+        transform: rotateY(20deg);
     }
     70%{
-        transform: rotateX(-2deg);
+        transform: rotateY(-20deg);
     }
     80%{
-        transform: rotateX(2deg);
+        transform: rotateY(20deg);
     }
     90%{
-        transform: rotateX(-2deg);
+        transform: rotateY(-20deg);
     }
     100%{
-        transform: rotateX(0);
+        transform: rotateY(0);
     }
 }
